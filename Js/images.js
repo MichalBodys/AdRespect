@@ -26,4 +26,3 @@ for(let i = 0; i< 40; i++){
     if(imageIndex > images.length - 1) imageIndex = 0;
 }
 
-module.exports = {posts};

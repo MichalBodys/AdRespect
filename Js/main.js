@@ -1,17 +1,14 @@
 import '../style.css'
-// import {posts} from './images'
-const {posts} = require('./images.js');
+import Masonry from 'masonry-layout'
 
-const wrapper = document.querySelector('.image-wrapper')
 
-function generateMasonGrid(columns, posts){
-    wrapper.innerHTML= '';
 
-    let columnWrappers = {};
-    for (let i = 0; i< columns; i++){
-        columnWrappers[`column${i}`] = []
-    }
-    console.log(columnWrappers)
+window.onload = () => {
+    const grid = document.querySelector('.grid-m');
+
+    const masonry = new Masonry(grid, {
+        itemSelector : '.grid-item',
+        gutter:10
+    })
+
 }
-
-generateMasonGrid(4, posts)
