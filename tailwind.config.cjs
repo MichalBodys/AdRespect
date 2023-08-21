@@ -13,6 +13,9 @@ export default {
       width: {
         calc: '(calc(100%-40px)/3)',
       },
+      boxShadow:{
+        card: 'box-shadow: black 0px -90px 36px -28px inset;'
+      }
     },
     plugins: [],
   },

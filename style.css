@@ -12,11 +12,34 @@
 }
 
 @layer components{
-  .arrow-btn{
-   @apply px-4 py-4 text-xl cursor-pointer ms-2
+
+}
+
+@layer utilities{
+  .nav-item {
+    @apply relative hover:text-green
+  }
+  .nav-item::after{
+    @apply content-[''] bg-green h-[3px] w-[0%] left-0 -bottom-[5px] absolute duration-300 rounded-2xl
+  }
+  .nav-item:hover::after{
+    @apply w-[100%]
+  }
+  .btn-green{
+    @apply  hover:bg-white hover:border-green hover:border-2  hover:text-green transition-colors duration-300
+  }
+  .btn-beige{
+    @apply  hover:bg-green hover:border-white  hover:text-white transition-colors duration-300
+  }
+  .btn-white{
+    @apply hover:bg-green hover:border-white hover:text-white transition-colors duration-300
   }
   .drop-nav{
     @apply py-2 cursor-pointer
+  }
+
+  .active{
+    @apply flex
   }
 
 }

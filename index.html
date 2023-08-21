@@ -19,10 +19,10 @@
   <body class="overflow-x-hidden">
     <header class="px-3 md:px-12">
       <nav class="w-full">
-        <div class="flex  justify-between py-6 items-center">
+        <div class="flex justify-between py-6 items-center">
           <p><span class="font-bold">giard</span>design</p>
           <ul class="hidden md:flex gap-x-12">
-            <li>
+            <li class="nav-item">
               Oferta
               <ul class="hidden absolute z-10 bg-white p-2">
                 <li class="drop-nav">first</li>
@@ -30,9 +30,9 @@
                 <li class="drop-nav">thirde</li>
               </ul>
             </li>
-            <li><a href="">O firmie</a></li>
-            <li><a href="">Realizacje</a></li>
-            <li><a href="">Kontakt</a></li>
+            <li><a href=" " class="nav-item">O firmie</a></li>
+            <li><a href="" class="nav-item">Realizacje</a></li>
+            <li><a href="" class="nav-item">Kontakt</a></li>
             <li>
               <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
             </li>
@@ -43,10 +43,12 @@
     </header>
     <main>
       <section id="Hero">
-        <div class="bg-beige grid grid-rows-2 md:flex md:flex-row w-full  md:gap-16">
+        <div
+          class="bg-beige grid grid-rows-2 md:flex md:flex-row w-full md:gap-16"
+        >
           <div class="flex items-center md:ps-12 w-full md:min-h-screen">
             <div class="flex flex-col">
-              <h2 class="text-4xl  md:text-6xl ">
+              <h2 class="text-4xl md:text-6xl">
                 Nowoczesna<br />
                 aranżacja<br />
                 Twojego ogrodu
@@ -57,11 +59,13 @@
                 podejściem do każdego projektu.
               </p>
               <div class="flex md:gap-9">
-                <button class="bg-green rounded-full text-white py-3 px-6">
+                <button
+                  class="btn-green bg-green rounded-full text-white py-3 px-6"
+                >
                   Skontaktuj się z nami
                 </button>
                 <button
-                  class="rounded-full text-green border-green border-2 py-3 px-6"
+                  class="btn-beige rounded-full text-green border-green border-2 py-3 px-6"
                 >
                   Zobacz nasze realizacje
                   <i class="ms-2 fa-solid fa-arrow-down"></i>
@@ -70,12 +74,14 @@
             </div>
           </div>
           <div
-            class="relative  w-full bg-cover bg-center"
+            class="relative w-full bg-cover bg-center"
             style="background-image: url('/hero-img.jpeg')"
           >
-            <div class="bg-white absolute bottom-0 right-0">
-              <i class="arrow-btn fa-solid fa-arrow-left"></i
-              ><i class="arrow-btn fa-solid fa-arrow-right"></i>
+            <div
+              class="flex gap-10 p-[48px] justify-center items-center bg-white absolute bottom-0 right-2"
+            >
+              <img class="" src="./public/ArrowL1.svg" alt="" />
+              <img src="./public/ArrowR1.svg" alt="" />
             </div>
           </div>
         </div>
@@ -94,38 +100,7 @@
             a na każdym etapie posłużymy radą i wieloletnim doświadczeniem.
           </p>
         </div>
-        <div id="Cards" class="flex flex-col md:flex-row gap-16 mb-40">
-          <div class="bg-white rounded-[28px] px-[40px] py-[48px]">
-            <h3>Projekty</h3>
-            <p>
-              Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
-              wykorzystaniem istniejącej przestrzeni.
-            </p>
-            <a href="" class=""
-              >Dowiedz się wiecej<i class="fa-solid fa-arrow-right"></i
-            ></a>
-          </div>
-          <div class="bg-white rounded-[28px] px-[40px] py-[48px]">
-            <h3>Projekty</h3>
-            <p>
-              Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
-              wykorzystaniem istniejącej przestrzeni.
-            </p>
-            <a href="" class=""
-              >Dowiedz się wiecej<i class="fa-solid fa-arrow-right"></i
-            ></a>
-          </div>
-          <div class="bg-white rounded-[28px] px-[40px] py-[48px]">
-            <h3>Projekty</h3>
-            <p>
-              Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
-              wykorzystaniem istniejącej przestrzeni.
-            </p>
-            <a href="" class=""
-              >Dowiedz się wiecej<i class="fa-solid fa-arrow-right"></i
-            ></a>
-          </div>
-        </div>
+        <div id="Cards" class="flex flex-col md:flex-row gap-16 mb-40"></div>
       </section>
       <section id="About">
         <div class="bg-green grid grid-rows-2 text-grey md:flex gap-16">
@@ -150,7 +125,7 @@
               </p>
 
               <button
-                class="rounded-full w-1/3 text-xs text-grey border-grey border-2 py-3 px-6"
+                class="btn-green rounded-full w-1/3 text-xs text-grey border-grey border-2 py-3 px-6"
               >
                 Poznaj nas bliżej
                 <i class="ms-2 fa-solid fa-arrow-right"></i>
@@ -159,78 +134,46 @@
           </div>
         </div>
       </section>
-      <section id="Projects" class="bg-beige py-[120px]">
+      <section id="Projects" class="bg-beige pt-[120px] relative">
         <div class="ps-[160px]">
           <p class="text-xs mb-4">Realizacje</p>
           <h2 class="text-5xl mb-11">Nasze projekty</h2>
         </div>
-        <div class="grid-m min-w-full">
+
+        <div class="grid-m relative" id="Gallery">
           <div
-            class="grid-item mb-[10px]"
-            style="width: calc((100% - 20px) / 3)"
+            id="Popup"
+            class="fixed z-20 hidden justify-center items-center inset-0 w-full h-full bg-[rgba(0,0,0,0.75)]"
           >
-            <img src="/public/img1.jpeg" alt="" />
-          </div>
-          <div
-            class="grid-item mb-[10px]"
-            style="width: calc((100% - 20px) / 3)"
-          >
-            <img src="/public/img2.jpeg" alt="" />
-          </div>
-          <div
-            class="grid-item mb-[10px]"
-            style="width: calc((100% - 20px) / 3)"
-          >
-            <img src="/public/img3.jpeg" alt="" />
-          </div>
-          <div
-            class="grid-item mb-[10px]"
-            style="width: calc((100% - 20px) / 3)"
-          >
-            <img src="/public/img4.jpeg" alt="" />
-          </div>
-          <div
-            class="grid-item mb-[10px]"
-            style="width: calc((100% - 20px) / 3)"
-          >
-            <img src="/public/img5.jpeg" alt="" />
-          </div>
-          <div
-            class="grid-item mb-[10px]"
-            style="width: calc((100% - 20px) / 3)"
-          >
-            <img src="/public/img6.jpeg" alt="" />
-          </div>
-          <div
-            class="grid-item mb-[10px]"
-            style="width: calc((100% - 20px) / 3)"
-          >
-            <img src="/public/img7.jpeg" alt="" />
-          </div>
-          <div
-            class="grid-item mb-[10px]"
-            style="width: calc((100% - 20px) / 3)"
-          >
-            <img src="/public/img8.jpeg" alt="" />
-          </div>
-          <div
-            class="grid-item mb-[10px]"
-            style="width: calc((100% - 20px) / 3)"
-          >
-            <img src="/public/img9.jpeg" alt="" />
+            <button id="GaleryClose" class="absolute right-0 top-0">close</button>
+
+            <div class="flex text-4xl justify-between w-[90%]">
+              <button id="Back"><i class="fa-solid fa-arrow-left" style="color: #fcfcfc;"></i></button>
+              <button class="Next"><i class="fa-solid fa-arrow-right" style="color: #fcfcfc;"></i></button>
+
+            </div>
+
+            <button></button>
           </div>
         </div>
+        <div
+          class="absolute inset-x-0 z-10 shadow-[0px_-250px_316px_250px_#DCC1AB]"
+        ></div>
       </section>
-      <section id="Instagram" class="bg-grey py-[60px]">
+      <section id="Instagram" class="bg-grey py-[60px] z-20">
         <div class="flex items-center justify-center text-white">
-          <div class="grid text-center md:flex  items-end gap-[64px] py-[120px]  md:px-[110px] bg-green">
+          <div
+            class="grid text-center md:flex items-end gap-[64px] py-[120px] md:px-[110px] bg-green"
+          >
             <p class="text-4xl block">
               Zostańmy w kontakcie!<br />
               Znajdziesz nas na <span class="italic">Instagramie</span>.
             </p>
             <div class="flex flex-col gap-6 text-xs">
               <p>Śledź nasze<br />najnowsze realizacje!</p>
-              <button class="rounded-full py-3 px-6 bg-grey text-green">
+              <button
+                class="btn-white border-2 rounded-full py-3 px-6 bg-grey text-green"
+              >
                 Instagram
               </button>
             </div>
@@ -238,12 +181,17 @@
         </div>
       </section>
     </main>
-    <footer id="Footer" class="bg-black md:flex flex-col py-[80px] md:px-[150px] text-white hidden">
-      <div class="flex justify-between ">
+    <footer
+      id="Footer"
+      class="bg-black md:flex flex-col py-[80px] md:px-[150px] text-white hidden"
+    >
+      <div class="flex justify-between">
         <p class="block"><span>giard</span>design</p>
-        <div class="flex gap-6">
+        <div class="flex items-center gap-6">
           <p>Daj znać, co możemy dla Ciebie zrobić!</p>
-          <button>Skontaktuj się z nami</button>
+          <button class="btn-green bg-green rounded-full text-white py-3 px-6">
+            Skontaktuj się z nami
+          </button>
         </div>
       </div>
       <hr class="my-[62px]" />
@@ -264,21 +212,32 @@
         <p>Made by AdRespect</p>
       </div>
     </footer>
-    <footer class=" bg-black text-white py-2  flex flex-col gap-2 md:hidden">
+    <footer class="bg-black text-white py-2 flex flex-col gap-2 md:hidden">
       <div class="text-center">
         <p>giard<span>design</span></p>
         <p>Daj znać co możemy dla Ciebie zrobić</p>
-        <button>Skontaktuj się z nami</button>
-        <hr>
+        <button
+          class="btn-green bg-green rounded-full border-2 text-white py-3 px-6"
+        >
+          Skontaktuj się z nami
+        </button>
+        <hr />
       </div>
       <div class="text-center">
-        <p class="flex gap-2 justify-center"><a href="">Kontakt</a>|<a href="">Instagram</a> |<a href="">Facebook</a>|<a href="">Linkedin</a> </p>
-        <a href="tel:+48 000-000-000">000-000-000</a> <a href="mailto:giarddesign@kontakt.pl">giarddesign@kontakt.pl</a>
+        <p class="flex gap-2 justify-center">
+          <a href="">Kontakt</a>|<a href="">Instagram</a> |<a href=""
+            >Facebook</a
+          >|<a href="">Linkedin</a>
+        </p>
+        <a href="tel:+48 000-000-000">000-000-000</a>
+        <a href="mailto:giarddesign@kontakt.pl">giarddesign@kontakt.pl</a>
       </div>
-      <hr>
-      <div class="text-xs text-center mt-2"><p>Prawa zastrzeżone &copy; 2022 made by giardDesign</p></div>
+      <hr />
+      <div class="text-xs text-center mt-2">
+        <p>Prawa zastrzeżone &copy; 2022 made by giardDesign</p>
+      </div>
     </footer>
-    <script type="module" src="./Js/images.js"></script>
+
     <script type="module" src="./Js/main.js"></script>
   </body>
 </html>
