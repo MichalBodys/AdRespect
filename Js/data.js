@@ -15,9 +15,9 @@ const posts = [];
 ]
 
 const cards = [
-    { url: './public/iconpen.png', title: 'Projekty', text: 'Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.'},
-    { url: './public/Iconeye.png', title: 'Wizualizacje', text: 'Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D'},
-    { url: './public/iconstars.png', title: 'Realizacje', text: 'Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.' }
+    { url: '/iconpen.png', title: 'Projekty', text: 'Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.'},
+    { url: '/Iconeye.png', title: 'Wizualizacje', text: 'Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D'},
+    { url: '/iconstars.png', title: 'Realizacje', text: 'Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.' }
 ]
 
 let imageIndex = 0;

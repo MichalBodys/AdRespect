@@ -28,7 +28,7 @@ photos.forEach((item, i) => {
 })
 
 const updateImage = (i) =>{
-  let path = `./public/img${i+1}.jpeg`
+  let path = `/img${i+1}.jpeg`
   image.src = path;
   imgIndex.textContent = `0${i}`
   index = i
