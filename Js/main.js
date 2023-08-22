@@ -28,7 +28,7 @@ photos.forEach((item, i) => {
 })
 
 const updateImage = (i) =>{
-  let path = `public/img${i+1}.jpeg`
+  let path = `./public/img${i+1}.jpeg`
   image.src = path;
   imgIndex.textContent = `0${i}`
   index = i
@@ -74,7 +74,7 @@ const postCards = () => {
         </p>
         <div class="text-green">
         <a href="" class="text-green flex gap-2"
-          >Dowiedz się wiecej<img src='/public/arrowRight.svg'</a>
+          >Dowiedz się wiecej<img src='./public/arrowRight.svg'</a>
           <div />`;
     cardsBox.appendChild(cardBox);
   });
