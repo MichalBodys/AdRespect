@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap"
       rel="stylesheet"
     />
-    <title></title>
+    <title>giarddesign</title>
     <script
       src="https://kit.fontawesome.com/b31bd8de89.js"
       crossorigin="anonymous"
@@ -21,25 +21,27 @@
       <nav class="w-full relative">
         <div class="flex justify-between py-6 items-center">
           <p><span class="font-bold">giard</span>design</p>
-          <ul class="hidden md:flex gap-x-12">
+          <ul class="flex text-xs gap-x-2
+          md:text-base md:gap-x-12">
             <li class="nav-item dropdown cursor-pointer">
-              Oferta
+              <a href="#Offer">Oferta</a>
               <ol
-                class="cursor-pointer active-search absolute translate-x-[-10%] z-10 p-2"
+                class="cursor-pointer rounded-md active-search absolute translate-x-[-10%] z-10 p-2"
               >
-                <li class="drop-nav nav-item">first</li>
-                <li class="drop-nav nav-item">second</li>
-                <li class="drop-nav nav-item">thirde</li>
+                <li class="drop-nav">first</li>
+                <li class="drop-nav">second</li>
+                <li class="drop-nav">thirde</li>
               </ol>
             </li>
-            <li><a href=" " class="nav-item hover:scale-125">O firmie</a></li>
-            <li><a href="" class="nav-item">Realizacje</a></li>
-            <li><a href="" class="nav-item">Kontakt</a></li>
+            <li>
+              <a href="#Hero" class="nav-item hover:scale-125">O firmie</a>
+            </li>
+            <li><a href="#Projects" class="nav-item">Realizacje</a></li>
+            <li><a href="#Footer" class="nav-item">Kontakt</a></li>
             <button id="Search">
-              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid  fa-magnifying-glass"></i>
             </button>
           </ul>
-          <div class="md:hidden">button</div>
         </div>
         <div id="SearchPop" class="hidden bg-white mb-2 transition-transform">
           <i class="fa-solid fa-magnifying-glass"></i>
@@ -48,32 +50,32 @@
       </nav>
     </header>
     <main>
-      <section id="Hero">
+      <section id="Hero" >
         <div
           class="bg-beige grid grid-rows-2 md:flex md:flex-row w-full md:gap-16"
         >
           <div class="flex items-center p-5 md:ps-12 w-full md:min-h-screen">
             <div class="flex flex-col">
-              <h2 class="text-center mb-3 text-4xl md:text-start md:text-6xl">
+              <h2 class="animate text-center mb-3 text-4xl md:text-start md:text-6xl">
                 Nowoczesna<br />
                 aranżacja<br />
                 Twojego ogrodu
               </h2>
-              <p class="text-center md:text-start mb-[72px]">
+              <p class="animate text-center md:text-start mb-[72px]">
                 Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
                 realizacji. Oferujemy kompleksowy zakres usługz indywidualnym
                 podejściem do każdego projektu.
               </p>
               <div class="flex flex-col md:flex-row gap-2 md:gap-9">
                 <button
-                  class="btn-green   bg-green rounded-full border-2 border-green text-white py-3 px-6"
+                  class="btn-green bg-green rounded-full border-2 border-green text-white py-3 px-6"
                 >
-                  Skontaktuj się z nami
+                 <a href="#Footer">Skontaktuj się z nami</a>
                 </button>
                 <button
                   class="btn-beige rounded-full text-green border-green border-2 py-3 px-6"
                 >
-                  Zobacz nasze realizacje
+                  <a href="#Projects">Zobacz nasze realizacje</a>
                   <i class="ms-2 fa-solid fa-arrow-down"></i>
                 </button>
               </div>
@@ -81,24 +83,18 @@
           </div>
           <div
             class="relative w-full bg-cover bg-center"
-            style="background-image: url('/hero-img.jpeg')"
+            style="background-image: url('/hero-img1.jpeg')"
           ></div>
-        </div>
-        <div
-          class="flex gap-10 p-[48px] justify-center items-center bg-white absolute bottom-0 right-2"
-        >
-          <img class="" src="./public/ArrowL1.svg" alt="" />
-          <img src="./public/ArrowR1.svg" alt="" />
         </div>
       </section>
       <section
         id="Offer"
-        class="p-5 md:px-12 flex flex-col text-center md:text-start gap-y-24 bg-grey md:w-[width: 1040px]"
+        class="sec-2 p-5 md:px-12 flex flex-col text-center md:text-start gap-y-24 bg-grey md:w-[width: 1040px]"
       >
         <div class="mt-[120px]">
           <p class="text-green text-xs mb-4">Oferta</p>
-          <h2 class="text-5xl  mb-8">Działamy kompleksowo</h2>
-          <p class="text-base align-baseline">
+          <h2 class="text-5xl mb-8">Działamy kompleksowo</h2>
+          <p class="text-base w-full md:w-2/3">
             Oferujemy kompletną obsługę inwestycji terenów zielonych.
             Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne.
             Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie,
@@ -107,20 +103,22 @@
         </div>
         <div id="Cards" class="flex flex-col md:flex-row gap-16 mb-40"></div>
       </section>
-      <section id="About">
-        <div class="bg-green grid grid-rows-2 text-grey md:flex gap-16">
+      <section id="About" class="sec-3">
+        <div class=" bg-green grid grid-rows-2 text-grey md:flex gap-16">
           <div
-            class="relative w-full bg-cover bg-center"
+            class="animate relative w-full bg-cover bg-center"
             style="background-image: url('/About.jpeg')"
           ></div>
-          <div class="flex ps-24 w-full md:h-screen m-auto items-center">
-            <div class="flex flex-col">
+          <div
+            class="flex p-5 md:ps-24 w-full text-center md:text-start md:h-screen m-auto items-center"
+          >
+            <div class="animate flex flex-col">
               <p class="text-xs mb-4">o firmie</p>
               <h2 class="text-5xl mb-11">
                 Tworzymy<br />
                 z <span class="italic"> pasją </span>
               </h2>
-              <p class="mb-[72px] text-xs w-3/4">
+              <p class="mb-[72px] text-xs md:w-3/4">
                 Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
                 wykwalifikowani projektanci oraz architekci, których zadaniem
                 jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza
@@ -130,7 +128,7 @@
               </p>
 
               <button
-                class="btn-green rounded-full w-1/3 text-xs text-grey border-2 py-3 px-6"
+                class="btn-green rounded-full ms-auto -translate-x-[50%]  w-2/4 md:w-1/3 text-xs text-grey border-2 py-3 px-6"
               >
                 Poznaj nas bliżej
                 <i class="ms-2 fa-solid fa-arrow-right"></i>
@@ -139,66 +137,75 @@
           </div>
         </div>
       </section>
-      <section id="Projects" class="bg-beige pt-[120px] relative">
-        <div class="ps-[160px]">
+      <section
+        id="Projects"
+        class="bg-beige pt-[60px] md:pt-[120px] overflow-y-hidden h-[520px] min-[390px]:h-[710px] md:h-[200vh]  relative transition-transform"
+      >
+        <div class="text-center md:text-start md:ps-[160px]">
           <p class="text-xs mb-4">Realizacje</p>
           <h2 class="text-5xl mb-11">Nasze projekty</h2>
         </div>
 
-        <div class="grid-m relative" id="Gallery">
+        <div class="grid-m overflow-y-hidden" id="Gallery">
           <div
             class="grid-item mb-[10px] photo"
             style="width: calc((100% - 20px) / 3)"
           >
-            <img src="./public/img1.jpeg" alt="" />
+            <img src="./public/img1.jpeg" alt="garden mezzanine" />
           </div>
           <div
             class="grid-item mb-[10px] photo"
             style="width: calc((100% - 20px) / 3)"
           >
-            <img src="./public/img2.jpeg" alt="" />
+            <img src="./public/img2.jpeg" alt="wooden terrace" />
           </div>
           <div
             class="grid-item mb-[10px] photo"
             style="width: calc((100% - 20px) / 3)"
           >
-            <img src="./public/img3.jpeg" alt="" />
+            <img src="./public/img3.jpeg" alt="tree inside concreat stears" />
           </div>
           <div
             class="grid-item mb-[10px] photo"
             style="width: calc((100% - 20px) / 3)"
           >
-            <img src="./public/img4.jpeg" alt="" />
+            <img src="./public/img4.jpeg" alt="rocky path between plants" />
           </div>
           <div
             class="grid-item mb-[10px] photo"
             style="width: calc((100% - 20px) / 3)"
           >
-            <img src="./public/img5.jpeg" alt="" />
+            <img src="./public/img5.jpeg" alt="koi fish in pond" />
           </div>
           <div
             class="grid-item mb-[10px] photo"
             style="width: calc((100% - 20px) / 3)"
           >
-            <img src="./public/img6.jpeg" alt="" />
+            <img src="./public/img6.jpeg" alt="taracce on top of the building" />
           </div>
           <div
             class="grid-item mb-[10px] photo"
             style="width: calc((100% - 20px) / 3)"
           >
-            <img src="./public/img7.jpeg" alt="" />
+            <img src="./public/img7.jpeg" alt="path with wall and roof made of roses" />
           </div>
           <div
             class="grid-item mb-[10px] photo"
             style="width: calc((100% - 20px) / 3)"
           >
-            <img src="./public/img8.jpeg" alt="" />
+            <img src="./public/img8.jpeg" alt="modern taracce with wooden flor and litle swimming pool" />
           </div>
           <div
             class="grid-item mb-[10px] photo"
             style="width: calc((100% - 20px) / 3)"
           >
-            <img src="./public/img9.jpeg" alt="" />
+            <img src="./public/img9.jpeg" alt="perfectly trimmed lawn" />
+          </div>
+          <div
+            class="grid-item mb-[10px] photo"
+            style="width: calc((100% - 20px) / 3)"
+          >
+            <img src="./public/img11.jpg" alt="garden gnome" />
           </div>
 
           <div
@@ -238,22 +245,35 @@
           </div>
         </div>
         <div
-          class="absolute inset-x-0 z-10 shadow-[0px_-250px_316px_250px_#DCC1AB]"
-        ></div>
+          id="Shadow"
+          class="absolute inset-x-0 top- z-10 shadow-[0px_-150px_316px_150px_#DCC1AB] md:shadow-[0px_-350px_316px_250px_#DCC1AB]"
+        >
+          <button
+            id="More"
+            class="absolute border animate-bounce border-black rounded-full p-3 -top-[170px] md:-top-[570px]   left-[38%] md:left-[50%] md:-translate-x-[50%] text-black"
+          >
+            Rozwiń<i
+              class="ml-1 fa-solid fa-arrow-down"
+              style="color: #000000"
+            ></i>
+          </button>
+        </div>
       </section>
-      <section id="Instagram" class="bg-grey py-[60px] z-20">
+      <section id="Instagram" class="sec-2 bg-grey py-[60px] z-20">
         <div class="flex items-center justify-center text-white">
           <div
-            class="grid text-center md:flex items-end gap-[64px] py-[120px] md:px-[110px] bg-green"
+            class="animate grid text-center md:flex items-end gap-[64px] py-[120px] px-6 md:px-[110px] bg-green"
           >
-            <p class="text-4xl block">
+            <p class="text-xl md:text-4xl block">
               Zostańmy w kontakcie!<br />
               Znajdziesz nas na <span class="italic">Instagramie</span>.
             </p>
-            <div class="flex flex-col gap-6 text-xs">
+            <div
+              class="flex flex-col items-center md:items-start gap-6 text-xs"
+            >
               <p>Śledź nasze<br />najnowsze realizacje!</p>
               <button
-                class="btn-white border-2 rounded-full py-3 px-6 bg-grey text-green"
+                class="btn-white border-2 rounded-full w-2/3 md:w-full py-3 px-3 md:px-6 bg-grey text-green"
               >
                 Instagram
               </button>

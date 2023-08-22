@@ -14,11 +14,40 @@ const galleryBack = document.querySelector('#Back')
 const image = document.querySelector('.image');
 const searchBtn = document.querySelector('#Search')
 const searchPop = document.querySelector('#SearchPop')
+const shadow = document.querySelector('#Shadow')
+const projectContainer = document.querySelector('#Projects')
+const btnMore = document.querySelector('#More')
+let sections = document.querySelectorAll('section')
 let index = 0;
+let isOpen = false
 
 
 
 // functions
+
+
+window.onscroll = () => {
+  sections.forEach(sec => {
+    let top =window.scrollY;
+    let offset = sec.offsetTop - 150;
+    let height = sec.offsetHeight;
+
+    if(top >= offset && top < offset + height){
+      sec.classList.add('show-animate')
+    }else {
+      sec.classList.remove('show-animate')
+    }
+
+  })
+}
+
+
+const openGallery = () => {
+ projectContainer.style.height = 'auto';
+ btnMore.style.display = 'none'
+ shadow.style.display = 'none'
+}
+
 
 photos.forEach((item, i) => {
   item.addEventListener('click', () => {
@@ -63,7 +92,7 @@ window.onload = () => {
 const postCards = () => {
   cards.map(card => {
     const cardBox = document.createElement('div');
-    cardBox.classList.add( 'bg-white', 'p-[48px]' ,'hover:scale-125', 'transition-transform', 'duration-300' );
+    cardBox.classList.add( 'bg-white', 'p-[48px]' ,'hover:scale-125', 'transition-transform', 'duration-300', 'animate');
     cardBox.style.borderRadius = '20px';
 
     cardBox.innerHTML = `
@@ -72,9 +101,9 @@ const postCards = () => {
         <p>
             ${card.text}
         </p>
-        <div class="text-green">
-        <a href="" class="text-green flex gap-2"
-          >Dowiedz się wiecej<img src='./public/arrowRight.svg'</a>
+        <div class="text-green ">
+        <a href="" class="text-green flex justify-start gap-2 "
+          >Dowiedz się wiecej<img src='/arrowRight.svg'</a>
           <div />`;
     cardsBox.appendChild(cardBox);
   });
@@ -105,6 +134,11 @@ galleryNext.addEventListener('click', () => {
       updateImage(index + 1);
   }
 })
+
+btnMore.addEventListener('click',()=>{
+  openGallery()
+})
+
 
 // postImages();
 postCards();

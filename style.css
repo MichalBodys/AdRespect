@@ -36,7 +36,7 @@
     @apply hover:bg-green hover:border-white hover:text-white transition-colors duration-300;
   }
   .drop-nav{
-    @apply py-2 opacity-0 hidden  z-20 transition-all delay-300
+    @apply py-2 opacity-0 hidden  z-20 bg-white px-2 transition-colors
   }
   .active {
     @apply flex
@@ -47,10 +47,42 @@
   }
 
   .dropdown:hover .drop-nav{
-     @apply block text-white opacity-100 bg-[rgba(0,0,0,0.75)]
+     @apply block  opacity-100
+  }
+
+  .drop-nav:hover{
+    @apply bg-green text-white
   }
 
   .hero{
     @apply bg-beige w-screen absolute grid grid-rows-2 md:flex md:flex-row  md:gap-16 transition-transform
   }
+
+  section .animate {
+    @apply transition-all duration-500
+  }
+
+  .sec-1 .animate {
+    opacity: 0
+  }
+  .sec-1.show-animate .animate {
+    opacity: 1
+  }
+
+  .sec-2 .animate{
+     opacity: 0
+  }
+  .sec-2.show-animate .animate{
+    opacity: 1;
+  }
+
+  .sec-3 .animate{
+    transform: scale(0.5)
+  }
+
+  .sec-3.show-animate .animate{
+    transform: scale(1)
+  }
+
+
 }
