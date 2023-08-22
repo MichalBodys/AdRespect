@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./*.{html,js}'],
+  content: ['./*.{html,js,css}'],
   theme: {
     colors: {
       beige: '#DCC1AB',
@@ -13,9 +13,10 @@ export default {
       width: {
         calc: '(calc(100%-40px)/3)',
       },
-      boxShadow:{
-        card: 'box-shadow: black 0px -90px 36px -28px inset;'
-      }
+      boxShadow: {
+        card: 'box-shadow: black 0px -90px 36px -28px inset;',
+      },
+      
     },
     plugins: [],
   },
