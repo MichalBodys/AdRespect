@@ -92,7 +92,7 @@ window.onload = () => {
 const postCards = () => {
   cards.map(card => {
     const cardBox = document.createElement('div');
-    cardBox.classList.add( 'bg-white', 'p-[48px]' ,'hover:scale-125', 'transition-transform', 'duration-300', 'animate');
+    cardBox.classList.add( 'bg-white', 'p-5' ,'hover:scale-125', 'transition-transform', 'duration-300', 'animate');
     cardBox.style.borderRadius = '20px';
 
     cardBox.innerHTML = `
